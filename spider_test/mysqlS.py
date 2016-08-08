@@ -13,7 +13,7 @@ class MysqlS:
     #数据库初始化
     def __init__(self):
         try:
-            self.db = MySQLdb.connect(user='root',password='root1234',host='localhost',database='test')
+            self.db = MySQLdb.connect(user='user',password='user',host='localhost',database='test')
             self.cur = self.db.cursor()
         except MySQLdb.Error,e:
              print self.getCurrentTime(),u"连接数据库错误，原因%d: %s".encode("GBK") % (e.args[0], e.args[1])
